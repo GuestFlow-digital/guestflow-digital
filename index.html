@@ -5,422 +5,311 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#18343b">
-<title>Alpenblick Boutique Hotel | Digitale Gästemappe</title>
-<meta name="description" content="Digitale Muster-Gästemappe des Alpenblick Boutique Hotels – erstellt von GuestFlow Digital.">
+<title>Muster-Gästemappe | GuestFlow Digital</title>
+<meta name="description" content="Digitale Muster-Gästemappe von GuestFlow Digital.">
 <style>
-:root {
-  --dark:#18343b;
-  --gold:#b99760;
-  --cream:#f8f6f1;
-  --white:#ffffff;
-  --muted:#647078;
-}
-* {box-sizing:border-box}
-html {scroll-behavior:smooth}
-body {
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--dark);
-  background:var(--cream);
-  line-height:1.6;
-}
-header {
-  background:var(--dark);
-  color:white;
-  padding:17px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-  flex-wrap:wrap;
-}
-.logo {
-  font-size:23px;
-  font-weight:bold;
-  letter-spacing:1px;
-}
-.logo span {color:#d6b77d}
-nav {display:flex;gap:15px;flex-wrap:wrap}
-nav a {color:white;text-decoration:none;font-size:14px}
-nav a:hover {color:#d6b77d}
-.hero {
-  min-height:510px;
-  background:
-    linear-gradient(90deg,rgba(12,30,39,.88),rgba(12,30,39,.25)),
-    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=85')
-    center/cover;
-  color:white;
-  display:flex;
-  align-items:center;
-  padding:70px 7%;
-}
-.hero-content {max-width:700px}
-.eyebrow {
-  color:#e3c48a;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  font-size:13px;
-  font-weight:bold;
-}
-h1 {
-  font-size:clamp(36px,6vw,65px);
-  line-height:1.12;
-  margin:18px 0;
-}
-h2 {
-  font-size:clamp(27px,4vw,38px);
-  line-height:1.2;
-}
-h3 {margin:8px 0}
-p {margin:10px 0 17px}
-.btn {
-  display:inline-block;
-  padding:13px 23px;
-  background:var(--gold);
-  color:white;
-  border:0;
-  border-radius:5px;
-  text-decoration:none;
-  font-weight:bold;
-  cursor:pointer;
-  margin:5px 7px 5px 0;
-}
-.btn.dark {background:var(--dark)}
-.btn.light {background:white;color:var(--dark)}
-section {padding:65px 7%}
-.center {text-align:center}
-.intro {max-width:760px;margin:0 auto 35px}
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:23px;
-}
-.card {
-  background:white;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 5px 22px rgba(0,0,0,.07);
-}
-.card img {
-  width:100%;
-  height:210px;
-  object-fit:cover;
-  display:block;
-}
-.card-content {padding:24px}
-.card-content p {color:#52616a}
-.tag {
-  display:inline-block;
-  background:#eee7d9;
-  color:#665333;
-  padding:5px 11px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:bold;
-}
-.info {
-  background:white;
-  border-radius:12px;
-  padding:27px;
-  box-shadow:0 4px 18px rgba(0,0,0,.05);
-}
-.info strong {color:var(--dark)}
-.info p {color:#52616a}
-.dark-section {background:var(--dark);color:white}
-.dark-section p {color:#e1e8e8}
-.wifi {
-  background:white;
-  color:var(--dark);
-  padding:30px;
-  border-radius:12px;
-  max-width:540px;
-  margin:30px auto 0;
-  text-align:left;
-}
-.wifi-row {
-  padding:12px 0;
-  border-bottom:1px solid #e7e7e7;
-}
-.wifi-row:last-child {border:0}
-.wifi-row span {display:block;color:#647078;font-size:13px}
-.wifi-row strong {font-size:19px;overflow-wrap:anywhere}
-.accordion {
-  max-width:850px;
-  margin:auto;
-}
-details {
-  background:white;
-  margin:12px 0;
-  padding:19px 23px;
-  border-radius:9px;
-}
-summary {cursor:pointer;font-weight:bold}
-details p {color:#52616a}
-footer {
-  background:#10262c;
-  color:white;
-  text-align:center;
-  padding:38px 7%;
-}
-footer a {color:#e1c38c}
-.small {font-size:13px;color:#b9c5c8}
-.notice {
-  background:#f0e9dc;
-  border-left:4px solid var(--gold);
-  padding:18px 22px;
-  border-radius:5px;
-}
-#toast {
-  position:fixed;
-  bottom:25px;
-  left:50%;
-  transform:translateX(-50%);
-  background:var(--dark);
-  color:white;
-  padding:12px 22px;
-  border-radius:8px;
-  display:none;
-  z-index:100;
-}
-@media(max-width:650px) {
-  header {justify-content:center;text-align:center}
-  nav {justify-content:center}
-  .hero {min-height:450px}
-  section {padding:48px 6%}
-}
+:root{--dark:#18343b;--gold:#b99760;--cream:#f8f6f1}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:var(--dark);background:var(--cream);line-height:1.6}
+.demo{background:#e9d8b7;text-align:center;padding:12px;font-size:13px;font-weight:bold}
+header{background:var(--dark);color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:bold;letter-spacing:1px}
+.logo span{color:#d6b77d}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+.hero{min-height:500px;background:linear-gradient(90deg,rgba(12,30,39,.9),rgba(12,30,39,.25)),url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=85') center/cover;color:white;display:flex;align-items:center;padding:65px 7%}
+.hero-content{max-width:720px}
+.eyebrow{color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-size:13px;font-weight:bold}
+.hero .eyebrow{color:#e3c48a}
+.demo-label{display:inline-block;border:1px solid #e3c48a;border-radius:25px;padding:7px 14px;font-size:12px;margin-bottom:20px}
+.placeholder{color:#f1d7a7;font-size:13px}
+h1{font-size:clamp(36px,6vw,65px);line-height:1.12;margin:18px 0}
+h2{font-size:clamp(27px,4vw,38px);line-height:1.2}
+h3{margin:8px 0}
+p{margin:10px 0 17px}
+.btn{display:inline-block;padding:13px 22px;background:var(--gold);color:white;border-radius:5px;text-decoration:none;font-weight:bold;margin:5px 7px 5px 0;font-size:14px;cursor:pointer;border:0}
+.btn.dark{background:var(--dark)}
+.btn.light{background:white;color:var(--dark)}
+section{padding:60px 7%}
+.center{text-align:center}
+.intro{max-width:760px;margin:0 auto 35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:23px}
+.card,.info{background:white;border-radius:12px;overflow:hidden;box-shadow:0 5px 22px rgba(0,0,0,.07)}
+.card img{width:100%;height:210px;object-fit:cover;display:block}
+.card-content,.info{padding:24px}
+.card p,.info p{color:#52616a}
+.tag{display:inline-block;background:#eee7d9;color:#665333;padding:5px 11px;border-radius:20px;font-size:12px;font-weight:bold}
+.dark-section{background:var(--dark);color:white}
+.dark-section p{color:#e1e8e8}
+.wifi{background:white;color:var(--dark);padding:30px;border-radius:12px;max-width:540px;margin:30px auto 0;text-align:left}
+.wifi-row{padding:12px 0;border-bottom:1px solid #ddd}
+.wifi-row:last-child{border:0}
+.wifi-row span{display:block;color:#647078;font-size:13px}
+.wifi-row strong{font-size:19px;overflow-wrap:anywhere}
+details{background:white;margin:12px auto;padding:19px 23px;border-radius:9px;max-width:850px}
+summary{cursor:pointer;font-weight:bold}
+details p{color:#52616a}
+.notice{background:#f0e9dc;border-left:4px solid var(--gold);padding:18px 22px;border-radius:5px}
+.sales{background:#eee7d9;text-align:center;padding:55px 7%}
+.sales p{max-width:700px;margin:12px auto 20px}
+footer{background:#10262c;color:white;text-align:center;padding:35px 7%}
+footer a{color:#e1c38c}
+.small{font-size:13px;color:#b9c5c8}
+#toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:var(--dark);color:white;padding:12px 22px;border-radius:8px;display:none;z-index:100}
+@media(max-width:650px){header{justify-content:center;text-align:center}nav{justify-content:center}section{padding:45px 6%}.hero{min-height:450px}}
 </style>
 </head>
-
 <body>
 
+<div class="demo">
+MUSTER-GÄSTEMAPPE · DEMO-VERSION · Individuell für Ihr Hotel gestaltbar
+</div>
+
 <header>
-  <div class="logo">ALPEN<span>BLICK</span></div>
-  <nav>
-    <a href="#willkommen">Willkommen</a>
-    <a href="#fruehstueck">Frühstück</a>
-    <a href="#hotel">Hotel</a>
-    <a href="#ausfluege">Erlebnisse</a>
-    <a href="#wlan">WLAN</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
+<div class="logo">ALPEN<span>BLICK</span></div>
+<nav>
+<a href="#willkommen">Willkommen</a>
+<a href="#fruehstueck">Frühstück</a>
+<a href="#hotel">Hotel</a>
+<a href="#ausfluege">Erlebnisse</a>
+<a href="#wlan">WLAN</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
 </header>
 
+<main>
 <div class="hero">
-  <div class="hero-content">
-    <div class="eyebrow">Alpenblick Boutique Hotel</div>
-    <h1>Willkommen in den Bergen.</h1>
-    <p>Entdecken Sie alles Wissenswerte für einen unvergesslichen Aufenthalt – bequem in Ihrer digitalen Gästemappe.</p>
-    <a class="btn" href="#willkommen">Gästemappe entdecken</a>
-    <a class="btn light" href="#wlan">WLAN-Zugang</a>
-  </div>
+<div class="hero-content">
+<div class="demo-label">INTERAKTIVE MUSTER-GÄSTEMAPPE</div>
+<div class="placeholder">Hier könnte der Name Ihres Hotels stehen</div>
+<div class="eyebrow">Alpenblick Boutique Hotel</div>
+<h1>Willkommen in den Bergen.</h1>
+<p>Entdecken Sie alles Wissenswerte für einen unvergesslichen Aufenthalt – bequem in Ihrer digitalen Gästemappe.</p>
+<a class="btn" href="#willkommen">Gästemappe entdecken</a>
+<a class="btn light" href="#wlan">WLAN-Zugang</a>
+</div>
 </div>
 
 <section id="willkommen">
-  <div class="center intro">
-    <div class="eyebrow">Schön, dass Sie da sind</div>
-    <h2>Ihr Zuhause auf Zeit</h2>
-    <p>Herzlich willkommen im Alpenblick Boutique Hotel. Wir wünschen Ihnen erholsame Tage, besondere Momente und viele schöne Erinnerungen.</p>
-  </div>
-  <div class="grid">
-    <div class="info">
-      <h3>🕒 Check-in & Check-out</h3>
-      <p>Check-in ab 15:00 Uhr<br>Check-out bis 11:00 Uhr</p>
-    </div>
-    <div class="info">
-      <h3>☕ Frühstück</h3>
-      <p>Täglich von 07:30 bis 10:30 Uhr.</p>
-    </div>
-    <div class="info">
-      <h3>🛎️ Rezeption</h3>
-      <p>Unser Team unterstützt Sie gerne bei Fragen und Wünschen.</p>
-    </div>
-  </div>
+<div class="center intro">
+<div class="eyebrow">Schön, dass Sie da sind</div>
+<h2>Ihr Zuhause auf Zeit</h2>
+<p>Herzlich willkommen im Alpenblick Boutique Hotel. Wir wünschen Ihnen erholsame Tage, besondere Momente und viele schöne Erinnerungen.</p>
+</div>
+<div class="grid">
+<div class="info">
+<h3>🕒 Check-in & Check-out</h3>
+<p>Check-in ab 15:00 Uhr<br>Check-out bis 11:00 Uhr</p>
+</div>
+<div class="info">
+<h3>☕ Frühstück</h3>
+<p>Täglich von 07:30 bis 10:30 Uhr.</p>
+</div>
+<div class="info">
+<h3>🛎️ Rezeption</h3>
+<p>Unser Team unterstützt Sie gerne bei Fragen und Wünschen.</p>
+</div>
+</div>
 </section>
 
 <section id="fruehstueck" style="background:#eeeae2">
-  <div class="center intro">
-    <div class="eyebrow">Genuss am Morgen</div>
-    <h2>Ein guter Tag beginnt mit Frühstück</h2>
-    <p>Starten Sie entspannt in den Tag mit frischen Backwaren, regionalen Spezialitäten, aromatischem Kaffee und einer Auswahl an Köstlichkeiten.</p>
-  </div>
-  <div class="grid">
-    <div class="card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=900&q=85" alt="Frühstück mit Kaffee und frischen Speisen">
-      <div class="card-content">
-        <span class="tag">07:30–10:30 Uhr</span>
-        <h3>Unser Frühstück</h3>
-        <p>Genießen Sie einen genussvollen Start in den Morgen.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85" alt="Frisches Brot">
-      <div class="card-content">
-        <span class="tag">Frisch & regional</span>
-        <h3>Mit Liebe ausgewählt</h3>
-        <p>Frische Backwaren und regionale Produkte machen den Unterschied.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Kaffee">
-      <div class="card-content">
-        <span class="tag">Kaffeegenuss</span>
-        <h3>Ihr Lieblingskaffee</h3>
-        <p>Ob Espresso, Cappuccino oder Tee – nehmen Sie sich Zeit zum Genießen.</p>
-      </div>
-    </div>
-  </div>
+<div class="center intro">
+<div class="eyebrow">Genuss am Morgen</div>
+<h2>Ein guter Tag beginnt mit Frühstück</h2>
+<p>Starten Sie entspannt in den Tag mit frischen Backwaren, regionalen Spezialitäten, aromatischem Kaffee und einer Auswahl an Köstlichkeiten.</p>
+</div>
+<div class="grid">
+<div class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=900&q=85" alt="Frühstück">
+<div class="card-content">
+<span class="tag">07:30–10:30 Uhr</span>
+<h3>Unser Frühstück</h3>
+<p>Genießen Sie einen genussvollen Start in den Morgen.</p>
+</div>
+</div>
+<div class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=85" alt="Frisches Brot">
+<div class="card-content">
+<span class="tag">Frisch & regional</span>
+<h3>Mit Liebe ausgewählt</h3>
+<p>Frische Backwaren und regionale Produkte machen den Unterschied.</p>
+</div>
+</div>
+<div class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Kaffee">
+<div class="card-content">
+<span class="tag">Kaffeegenuss</span>
+<h3>Ihr Lieblingskaffee</h3>
+<p>Ob Espresso, Cappuccino oder Tee – nehmen Sie sich Zeit zum Genießen.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section id="hotel">
-  <div class="center intro">
-    <div class="eyebrow">Gut zu wissen</div>
-    <h2>Informationen für Ihren Aufenthalt</h2>
-  </div>
-  <div class="grid">
-    <div class="info">
-      <h3>🧹 Zimmerreinigung</h3>
-      <p>Unser Housekeeping sorgt für ein angenehmes und gepflegtes Zimmer.</p>
-    </div>
-    <div class="info">
-      <h3>🚗 Parkmöglichkeiten</h3>
-      <p>Informationen zu verfügbaren Parkplätzen erhalten Sie an der Rezeption.</p>
-    </div>
-    <div class="info">
-      <h3>🐾 Haustiere</h3>
-      <p>Bitte erkundigen Sie sich nach den geltenden Haustierregelungen.</p>
-    </div>
-    <div class="info">
-      <h3>🌿 Nachhaltigkeit</h3>
-      <p>Helfen Sie mit, Ressourcen zu schonen und unsere Bergwelt zu schützen.</p>
-    </div>
-  </div>
+<div class="center intro">
+<div class="eyebrow">Gut zu wissen</div>
+<h2>Informationen für Ihren Aufenthalt</h2>
+</div>
+<div class="grid">
+<div class="info">
+<h3>🧹 Zimmerreinigung</h3>
+<p>Unser Housekeeping sorgt für ein angenehmes und gepflegtes Zimmer.</p>
+</div>
+<div class="info">
+<h3>🚗 Parkmöglichkeiten</h3>
+<p>Informationen zu verfügbaren Parkplätzen erhalten Sie an der Rezeption.</p>
+</div>
+<div class="info">
+<h3>🐾 Haustiere</h3>
+<p>Bitte erkundigen Sie sich nach den geltenden Haustierregelungen.</p>
+</div>
+<div class="info">
+<h3>🌿 Nachhaltigkeit</h3>
+<p>Helfen Sie mit, Ressourcen zu schonen und unsere Bergwelt zu schützen.</p>
+</div>
+</div>
 </section>
 
 <section id="ausfluege" style="background:#eeeae2">
-  <div class="center intro">
-    <div class="eyebrow">Die Region entdecken</div>
-    <h2>Besondere Erlebnisse rund um Garmisch-Partenkirchen</h2>
-    <p>Majestätische Gipfel, glasklare Seen und bayerische Lebensart warten darauf, entdeckt zu werden.</p>
-  </div>
-  <div class="grid">
-    <div class="card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Bergpanorama">
-      <div class="card-content">
-        <span class="tag">Naturerlebnis</span>
-        <h3>Zugspitze</h3>
-        <p>Erleben Sie Deutschlands höchsten Berg und ein beeindruckendes Alpenpanorama.</p>
-        <a class="btn dark" href="https://zugspitze.de" target="_blank" rel="noopener noreferrer">Mehr erfahren</a>
-      </div>
-    </div>
-    <div class="card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=85" alt="Natur und Berglandschaft">
-      <div class="card-content">
-        <span class="tag">Ausflugstipp</span>
-        <h3>Partnachklamm</h3>
-        <p>Entdecken Sie eine beeindruckende Schlucht mit Wasserfällen und steilen Felswänden.</p>
-        <a class="btn dark" href="https://www.gapa-tourismus.de" target="_blank" rel="noopener noreferrer">Mehr erfahren</a>
-      </div>
-    </div>
-    <div class="card">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85" alt="Bergsee">
-      <div class="card-content">
-        <span class="tag">Entspannung</span>
-        <h3>Eibsee</h3>
-        <p>Genießen Sie kristallklares Wasser und wunderschöne Ausblicke am Fuß der Zugspitze.</p>
-        <a class="btn dark" href="https://www.eibsee.de" target="_blank" rel="noopener noreferrer">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
+<div class="center intro">
+<div class="eyebrow">Die Region entdecken</div>
+<h2>Besondere Erlebnisse rund um Garmisch-Partenkirchen</h2>
+<p>Majestätische Gipfel, glasklare Seen und bayerische Lebensart warten darauf, entdeckt zu werden.</p>
+</div>
+<div class="grid">
+<div class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Bergpanorama">
+<div class="card-content">
+<span class="tag">Naturerlebnis</span>
+<h3>Zugspitze</h3>
+<p>Erleben Sie Deutschlands höchsten Berg und ein beeindruckendes Alpenpanorama.</p>
+<a class="btn dark" href="https://zugspitze.de" target="_blank" rel="noopener noreferrer">Mehr erfahren</a>
+</div>
+</div>
+<div class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=85" alt="Berglandschaft">
+<div class="card-content">
+<span class="tag">Ausflugstipp</span>
+<h3>Partnachklamm</h3>
+<p>Entdecken Sie eine beeindruckende Schlucht mit Wasserfällen und steilen Felswänden.</p>
+<a class="btn dark" href="https://www.gapa-tourismus.de" target="_blank" rel="noopener noreferrer">Mehr erfahren</a>
+</div>
+</div>
+<div class="card">
+<img loading="lazy" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85" alt="Bergsee">
+<div class="card-content">
+<span class="tag">Entspannung</span>
+<h3>Eibsee</h3>
+<p>Genießen Sie kristallklares Wasser und wunderschöne Ausblicke am Fuß der Zugspitze.</p>
+<a class="btn dark" href="https://www.eibsee.de" target="_blank" rel="noopener noreferrer">Mehr erfahren</a>
+</div>
+</div>
+</div>
 </section>
 
 <section class="dark-section" id="wlan">
-  <div class="center">
-    <div class="eyebrow">Immer verbunden</div>
-    <h2>Ihr WLAN-Zugang</h2>
-    <p>Verbinden Sie sich bequem mit dem Gäste-WLAN.</p>
-  </div>
-  <div class="wifi">
-    <div class="wifi-row">
-      <span>Netzwerkname</span>
-      <strong id="wifiName">Alpenblick-Gast</strong>
-    </div>
-    <div class="wifi-row">
-      <span>Passwort</span>
-      <strong id="wifiPassword">Alpenblick2026</strong>
-    </div>
-    <button class="btn dark" onclick="copyWifi()">Passwort kopieren</button>
-    <p style="font-size:12px;color:#647078">Beispieldaten für diese Muster-Gästemappe.</p>
-  </div>
+<div class="center">
+<div class="eyebrow">Immer verbunden</div>
+<h2>Ihr WLAN-Zugang</h2>
+<p>Verbinden Sie sich bequem mit dem Gäste-WLAN.</p>
+</div>
+<div class="wifi">
+<div class="wifi-row">
+<span>WLAN-Name (Beispiel)</span>
+<strong id="wifiName">Alpenblick-Gast</strong>
+</div>
+<div class="wifi-row">
+<span>WLAN-Passwort (Beispiel)</span>
+<strong id="wifiPass">Alpenblick2026!</strong>
+</div>
+<button class="btn dark" type="button" onclick="copyWifi()">WLAN-Passwort kopieren</button>
+<p style="font-size:12px;color:#647078">Demo-Zugangsdaten. Für Ihr Hotel werden Ihre echten WLAN-Daten hinterlegt.</p>
+</div>
 </section>
 
 <section id="faq">
-  <div class="center intro">
-    <div class="eyebrow">Häufige Fragen</div>
-    <h2>Gut informiert</h2>
-  </div>
-  <div class="accordion">
-    <details>
-      <summary>Wann ist der Check-out?</summary>
-      <p>In dieser Muster-Gästemappe ist der Check-out bis 11:00 Uhr vorgesehen.</p>
-    </details>
-    <details>
-      <summary>Wo finde ich das WLAN-Passwort?</summary>
-      <p>Im Abschnitt WLAN finden Sie den Netzwerknamen und das Passwort. Mit einem Klick können Sie das Passwort kopieren.</p>
-    </details>
-    <details>
-      <summary>Welche Ausflugsziele gibt es?</summary>
-      <p>Besonders beliebt sind die Zugspitze, die Partnachklamm und der Eibsee.</p>
-    </details>
-    <details>
-      <summary>Wie kann ich die Rezeption kontaktieren?</summary>
-      <p>In einer echten Hotel-Gästemappe werden hier Telefonnummer, E-Mail-Adresse und weitere Kontaktmöglichkeiten hinterlegt.</p>
-    </details>
-  </div>
+<div class="center intro">
+<div class="eyebrow">Häufige Fragen</div>
+<h2>Gut informiert während Ihres Aufenthalts</h2>
+</div>
+<details>
+<summary>Wann kann ich einchecken?</summary>
+<p>In dieser Mustermappe ist der Check-in ab 15:00 Uhr vorgesehen. Die Zeiten werden individuell angepasst.</p>
+</details>
+<details>
+<summary>Wann gibt es Frühstück?</summary>
+<p>Das Beispielhotel bietet Frühstück von 07:30 bis 10:30 Uhr an.</p>
+</details>
+<details>
+<summary>Wie erhalte ich das WLAN-Passwort?</summary>
+<p>Im WLAN-Bereich dieser Gästemappe finden Sie die Beispiel-Zugangsdaten und eine Kopierfunktion.</p>
+</details>
+<details>
+<summary>Kann ich Ausflugstipps direkt öffnen?</summary>
+<p>Ja. Über die Schaltflächen im Bereich Erlebnisse gelangen Sie zu weiterführenden Informationen.</p>
+</details>
 </section>
 
-<section id="kontakt" class="dark-section">
-  <div class="center intro">
-    <div class="eyebrow">Wir sind für Sie da</div>
-    <h2>Sie haben einen Wunsch?</h2>
-    <p>Ob Restaurantempfehlung, Ausflugstipp oder eine Frage zu Ihrem Aufenthalt – wir helfen Ihnen gerne weiter.</p>
-    <a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20zur%20Muster-G%C3%A4stemappe">Kontakt aufnehmen</a>
-  </div>
+<section id="kontakt">
+<div class="center intro">
+<div class="eyebrow">Wir sind für Sie da</div>
+<h2>Kontakt & Service</h2>
+<p>In einer fertigen Gästemappe finden Ihre Gäste hier die Kontaktdaten Ihres Hotels, wichtige Telefonnummern und individuelle Serviceangebote.</p>
+</div>
+<div class="notice">
+<strong>Hinweis zur Demo:</strong>
+Das Alpenblick Boutique Hotel dient ausschließlich als Beispiel. Hotelname, WLAN-Daten, Öffnungszeiten und Serviceinformationen sind Musterangaben.
+</div>
 </section>
 
-<section>
-  <div class="notice">
-    <strong>Hinweis: Interaktive Muster-Gästemappe</strong>
-    <p>Das Alpenblick Boutique Hotel ist ein fiktives Beispiel. Hotelname, WLAN-Zugang, Frühstückszeiten und weitere Hotelangaben dienen ausschließlich der Demonstration. Die Gästemappe kann für jedes Hotel individuell mit echten Informationen, Bildern, Kontaktdaten und Angeboten angepasst werden.</p>
-  </div>
+<section class="sales">
+<div class="eyebrow">GuestFlow Digital</div>
+<h2>Ihre eigene digitale Gästemappe</h2>
+<p>Diese Gästemappe ist ein Muster von GuestFlow Digital. Wir gestalten Ihre persönliche Gästemappe mit Ihrem Hotelnamen, Ihren Bildern, Ihrem Logo, Ihren Informationen und Ihren individuellen Angeboten.</p>
+<p><strong>Professionell · Mobiloptimiert · Individuell</strong></p>
+<a class="btn dark" href="mailto:info@guestflow-digital.com?subject=Anfrage%20digitale%20Gaestemappe">Eigene Gästemappe anfragen</a>
+<a class="btn" href="https://guestflow-digital.com" target="_blank" rel="noopener noreferrer">GuestFlow Digital besuchen</a>
 </section>
+</main>
 
 <footer>
-  <div class="logo">GuestFlow <span>Digital</span></div>
-  <p>Digitale Gästemappen, die Gäste begeistern.</p>
-  <p><a href="https://guestflow-digital.com">www.guestflow-digital.com</a></p>
-  <p><a href="mailto:info@guestflow-digital.com">info@guestflow-digital.com</a></p>
-  <p class="small">© 2026 GuestFlow Digital · Muster-Gästemappe</p>
+<strong>GuestFlow Digital</strong>
+<p>Digitale Gästemappen für moderne Gastgeber</p>
+<p><a href="mailto:info@guestflow-digital.com">info@guestflow-digital.com</a></p>
+<p><a href="https://guestflow-digital.com">www.guestflow-digital.com</a></p>
+<p class="small">Muster-Gästemappe · Alle Hotelangaben sind beispielhaft.</p>
 </footer>
 
 <div id="toast" role="status" aria-live="polite"></div>
 
 <script>
-function showToast(message) {
-  const toast = document.getElementById("toast");
-  toast.textContent = message;
-  toast.style.display = "block";
-  setTimeout(function() {
-    toast.style.display = "none";
-  }, 2500);
-}
-
-async function copyWifi() {
-  const password = document.getElementById("wifiPassword").textContent;
-  try {
-    await navigator.clipboard.writeText(password);
-    showToast("WLAN-Passwort kopiert!");
-  } catch (error) {
-    showToast("Passwort: " + password);
+function copyWifi(){
+  const password=document.getElementById("wifiPass").textContent;
+  const toast=document.getElementById("toast");
+  function show(message){
+    toast.textContent=message;
+    toast.style.display="block";
+    setTimeout(()=>toast.style.display="none",3000);
+  }
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(password)
+      .then(()=>show("WLAN-Passwort kopiert!"))
+      .catch(()=>show("Bitte Passwort manuell kopieren."));
+  }else{
+    const field=document.createElement("textarea");
+    field.value=password;
+    document.body.appendChild(field);
+    field.select();
+    try{
+      document.execCommand("copy")
+        ? show("WLAN-Passwort kopiert!")
+        : show("Bitte Passwort manuell kopieren.");
+    }catch(e){
+      show("Bitte Passwort manuell kopieren.");
+    }
+    field.remove();
   }
 }
 </script>
