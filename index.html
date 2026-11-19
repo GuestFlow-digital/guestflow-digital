@@ -1,52 +1,157 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GuestFlow Digital</title>
+<meta name="description" content="GuestFlow Digital – digitale Gästemappen und QR-Code-Gästeservice für Hotels und Ferienwohnungen.">
+<title>GuestFlow Digital | Digitale Gästeservices</title>
 <style>
+:root{--navy:#102b46;--teal:#197b91;--gold:#e4b45c;--light:#f5f8fb}
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f7f9fc;color:#243448;line-height:1.6}
-header,footer{background:#102b46;color:white;padding:25px;text-align:center}
-.hero{background:linear-gradient(135deg,#102b46,#197b91);color:white;text-align:center;padding:80px 20px}
-h1{font-size:clamp(30px,6vw,48px)}
-section{max-width:1050px;margin:auto;padding:55px 22px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{background:white;padding:25px;border-radius:12px;box-shadow:0 4px 16px #0001}
-.btn{display:inline-block;background:#e4b45c;color:#102b46;padding:14px 24px;border-radius:8px;text-decoration:none;font-weight:bold}
-.price{font-size:30px;color:#197b91;font-weight:bold}
-.contact{text-align:center}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:var(--navy);line-height:1.65}
+header{background:var(--navy);color:white;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{font-size:23px;font-weight:bold}
+nav a{color:white;text-decoration:none;margin-left:15px}
+.hero{background:linear-gradient(135deg,#102b46,#197b91);color:white;text-align:center;padding:90px 20px}
+.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.2;max-width:850px;margin:0 auto 25px}
+.hero p{font-size:19px;max-width:650px;margin:0 auto 30px}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);padding:15px 25px;border-radius:7px;text-decoration:none;font-weight:bold;margin:8px}
+.btn-outline{background:transparent;color:white;border:2px solid white}
+section{padding:70px 6%;max-width:1200px;margin:auto}
+h2{text-align:center;font-size:clamp(27px,4vw,38px)}
+.intro{text-align:center;max-width:720px;margin:0 auto 40px;color:#536477}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.card{background:white;border:1px solid #e5ebf0;border-radius:14px;padding:30px;box-shadow:0 6px 22px #102b4610}
+.card h3{font-size:22px}
+.symbol{font-size:34px}
+.alt{background:var(--light);max-width:none}
+.inner{max-width:1100px;margin:auto}
+.price{font-size:39px;font-weight:bold;color:var(--teal)}
+.small{font-size:14px;color:#607080}
+.demo{background:#edf5f7;border-radius:18px;padding:30px;max-width:620px;margin:auto}
+.demo h3{text-align:center}
+.demo-item{background:white;border-radius:9px;padding:15px;margin:12px 0}
+.contact{text-align:center;background:var(--navy);color:white;max-width:none}
+footer{background:#091d30;color:#cbd5df;text-align:center;padding:25px;font-size:13px}
+footer a{color:white}
+@media(max-width:600px){header{justify-content:center;text-align:center}nav a{margin:0 7px;font-size:14px}.hero{padding:65px 18px}section{padding:55px 20px}}
 </style>
 </head>
 <body>
-<header><h2>GuestFlow Digital</h2></header>
+
+<header>
+<div class="logo">GuestFlow Digital</div>
+<nav>
+<a href="#leistungen">Leistungen</a>
+<a href="#demo">Demo</a>
+<a href="#preise">Preise</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+</header>
+
 <div class="hero">
-<h1>Digitale Gästeservices. Einfach. Modern. Persönlich.</h1>
-<p>Digitale Lösungen für Hotels, Ferienwohnungen und Gastgeber.</p>
-<a class="btn" href="mailto:info@guestflow-digital.com">Jetzt anfragen</a>
+<h1>Der digitale Gästeservice, der begeistert.</h1>
+<p>Moderne digitale Gästemappen und intelligente Gästeinformationen für Hotels, Ferienwohnungen und Gastgeber.</p>
+<a class="btn" href="#demo">Beispiel entdecken</a>
+<a class="btn btn-outline" href="#kontakt">Jetzt anfragen</a>
 </div>
-<section>
-<h2>Unsere Leistungen</h2>
-<div class="cards">
-<div class="card"><h3>Digitale Gästemappen</h3><p>Alle wichtigen Gästeinformationen bequem per QR-Code abrufen.</p></div>
-<div class="card"><h3>Gästekommunikation</h3><p>Professionelle Gästetexte, Check-in-Informationen und FAQs auf Deutsch und Englisch.</p></div>
-<div class="card"><h3>KI-Content-Service</h3><p>Digitale Inhalte und moderne Texte für Tourismusbetriebe.</p></div>
-</div>
-</section>
-<section>
-<h2>Unser Einstiegspaket</h2>
+
+<section id="leistungen">
+<h2>Mehr Service. Weniger Aufwand.</h2>
+<p class="intro">Alle wichtigen Informationen für Ihre Gäste an einem Ort – jederzeit verfügbar, einfach per QR-Code.</p>
+<div class="grid">
 <div class="card">
-<h3>Digitale Gästemappe – Starter</h3>
-<p class="price">Ab 299 €</p>
-<p>Individuelle digitale Gästemappe inklusive QR-Code und mobilfreundlicher Darstellung.</p>
-<a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20Starterpaket">Paket anfragen</a>
+<div class="symbol">📱</div>
+<h3>Digitale Gästemappe</h3>
+<p>WLAN, Check-in, Hausinformationen, Frühstückszeiten und wichtige Hinweise übersichtlich auf dem Smartphone.</p>
+</div>
+<div class="card">
+<div class="symbol">🌍</div>
+<h3>Mehrsprachiger Service</h3>
+<p>Professionelle Gästeinformationen auf Deutsch und Englisch. Weitere Sprachen auf Anfrage.</p>
+</div>
+<div class="card">
+<div class="symbol">📍</div>
+<h3>Regionale Empfehlungen</h3>
+<p>Ausflugsziele, Restaurants, Aktivitäten und persönliche Tipps für einen gelungenen Aufenthalt.</p>
+</div>
+<div class="card">
+<div class="symbol">💬</div>
+<h3>Gäste-Kommunikation</h3>
+<p>Freundliche Vorlagen für Anreise, Aufenthalt, Abreise und häufig gestellte Fragen.</p>
+</div>
 </div>
 </section>
-<section class="contact">
-<h2>Kontakt</h2>
-<p>Wir freuen uns auf Ihre Anfrage.</p>
-<a class="btn" href="mailto:info@guestflow-digital.com">info@guestflow-digital.com</a>
+
+<section class="alt" id="demo">
+<div class="inner">
+<h2>Entdecken Sie unsere digitale Gästemappe</h2>
+<p class="intro">So einfach und übersichtlich erhalten Ihre Gäste alle wichtigen Informationen.</p>
+<div class="demo">
+<h3>🏡 Herzlich willkommen!</h3>
+<p style="text-align:center">Wir wünschen Ihnen einen wunderschönen Aufenthalt.</p>
+<div class="demo-item">📶 <strong>WLAN</strong><div>Netzwerk und Passwort auf einen Blick</div></div>
+<div class="demo-item">🔑 <strong>Anreise & Check-in</strong><div>Alle wichtigen Informationen zur Unterkunft</div></div>
+<div class="demo-item">☕ <strong>Frühstück & Service</strong><div>Zeiten, Angebote und Ansprechpartner</div></div>
+<div class="demo-item">🏔️ <strong>Ausflüge & Erlebnisse</strong><div>Die schönsten Tipps für Ihre Umgebung</div></div>
+<div class="demo-item">💬 <strong>Fragen & Kontakt</strong><div>Schnelle Hilfe während des Aufenthalts</div></div>
+</div>
+</div>
 </section>
-<footer>© 2026 GuestFlow Digital</footer>
+
+<section id="ablauf">
+<h2>In drei Schritten zu Ihrem digitalen Gästeservice</h2>
+<div class="grid">
+<div class="card"><h3>1. Unverbindlich anfragen</h3><p>Sie erzählen uns von Ihrer Unterkunft und Ihren Anforderungen.</p></div>
+<div class="card"><h3>2. Individuell gestalten</h3><p>Wir erstellen Ihre digitale Gästemappe mit Ihren Informationen und Ihrem Stil.</p></div>
+<div class="card"><h3>3. Gäste begeistern</h3><p>Sie erhalten einen Link und QR-Code, über den Ihre Gäste die Informationen aufrufen können.</p></div>
+</div>
+</section>
+
+<section class="alt" id="preise">
+<div class="inner">
+<h2>Transparent und unkompliziert</h2>
+<p class="intro">Professionelle digitale Lösungen ohne komplizierte Technik.</p>
+<div class="grid">
+<div class="card">
+<h3>Digitale Gästemappe</h3>
+<div class="price">ab 299 €</div>
+<p>Einmalige Einrichtung</p>
+<p>✓ Individuelle Gästemappe</p>
+<p>✓ Mobilfreundliches Design</p>
+<p>✓ QR-Code für Ihre Gäste</p>
+<p>✓ Deutsch und Englisch</p>
+<a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20Digitale%20Gaestemappe">Angebot anfragen</a>
+</div>
+<div class="card">
+<h3>Pflege & Aktualisierung</h3>
+<div class="price">Auf Anfrage</div>
+<p>Optionaler laufender Service</p>
+<p>✓ Aktualisierung von Gästeinformationen</p>
+<p>✓ Anpassung von Empfehlungen</p>
+<p>✓ Saisonale Änderungen</p>
+<p>✓ Individuelle Betreuung</p>
+<a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20Aktualisierungsservice">Details anfragen</a>
+</div>
+</div>
+<p class="small" style="text-align:center">Der endgültige Preis richtet sich nach dem individuellen Umfang.</p>
+</div>
+</section>
+
+<section class="contact" id="kontakt">
+<h2>Bereit für einen modernen Gästeservice?</h2>
+<p>Ob Apartment, Ferienwohnung oder Hotel – wir unterstützen Sie dabei, Ihren Gästen Informationen einfach und professionell bereitzustellen.</p>
+<a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20GuestFlow%20Digital">Jetzt unverbindlich anfragen</a>
+<p>info@guestflow-digital.com</p>
+</section>
+
+<footer>
+<p>© 2026 GuestFlow Digital · Digitale Gästeservices</p>
+<p>Kontakt: <a href="mailto:info@guestflow-digital.com">info@guestflow-digital.com</a></p>
+<p>Impressum und Datenschutzerklärung werden ergänzt.</p>
+</footer>
+
 </body>
 </html>
