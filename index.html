@@ -4,154 +4,302 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="GuestFlow Digital – digitale Gästemappen und QR-Code-Gästeservice für Hotels und Ferienwohnungen.">
-<title>GuestFlow Digital | Digitale Gästeservices</title>
+<meta name="description" content="GuestFlow Digital – moderne digitale Gästemappen für Hotels, Pensionen und Ferienwohnungen.">
+<title>GuestFlow Digital | Digitale Gästemappen</title>
 <style>
-:root{--navy:#102b46;--teal:#197b91;--gold:#e4b45c;--light:#f5f8fb}
+:root{--dark:#152b37;--gold:#b79560;--cream:#f8f6f1;--white:#fff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,sans-serif;color:var(--navy);line-height:1.65}
-header{background:var(--navy);color:white;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
-.logo{font-size:23px;font-weight:bold}
-nav a{color:white;text-decoration:none;margin-left:15px}
-.hero{background:linear-gradient(135deg,#102b46,#197b91);color:white;text-align:center;padding:90px 20px}
-.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.2;max-width:850px;margin:0 auto 25px}
-.hero p{font-size:19px;max-width:650px;margin:0 auto 30px}
-.btn{display:inline-block;background:var(--gold);color:var(--navy);padding:15px 25px;border-radius:7px;text-decoration:none;font-weight:bold;margin:8px}
-.btn-outline{background:transparent;color:white;border:2px solid white}
-section{padding:70px 6%;max-width:1200px;margin:auto}
-h2{text-align:center;font-size:clamp(27px,4vw,38px)}
-.intro{text-align:center;max-width:720px;margin:0 auto 40px;color:#536477}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.card{background:white;border:1px solid #e5ebf0;border-radius:14px;padding:30px;box-shadow:0 6px 22px #102b4610}
-.card h3{font-size:22px}
-.symbol{font-size:34px}
-.alt{background:var(--light);max-width:none}
-.inner{max-width:1100px;margin:auto}
-.price{font-size:39px;font-weight:bold;color:var(--teal)}
-.small{font-size:14px;color:#607080}
-.demo{background:#edf5f7;border-radius:18px;padding:30px;max-width:620px;margin:auto}
-.demo h3{text-align:center}
-.demo-item{background:white;border-radius:9px;padding:15px;margin:12px 0}
-.contact{text-align:center;background:var(--navy);color:white;max-width:none}
-footer{background:#091d30;color:#cbd5df;text-align:center;padding:25px;font-size:13px}
-footer a{color:white}
-@media(max-width:600px){header{justify-content:center;text-align:center}nav a{margin:0 7px;font-size:14px}.hero{padding:65px 18px}section{padding:55px 20px}}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--cream);line-height:1.65}
+header{background:var(--dark);color:white;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.logo{font-size:23px;font-weight:bold;letter-spacing:1px}
+.logo span{color:#d6b77d}
+nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
+.hero{min-height:490px;background:linear-gradient(90deg,rgba(12,30,39,.86),rgba(12,30,39,.35)),url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=85') center/cover;display:flex;align-items:center;padding:70px 8%;color:white}
+.hero-content{max-width:690px}
+h1{font-size:clamp(34px,5vw,60px);line-height:1.12;margin:15px 0}
+h2{font-size:clamp(27px,4vw,38px);line-height:1.2}
+h3{margin:8px 0}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--gold);font-weight:bold;font-size:13px}
+.btn{display:inline-block;padding:13px 23px;background:var(--gold);color:white;border:0;border-radius:8px;text-decoration:none;font-weight:bold;cursor:pointer;margin:6px 8px 6px 0}
+.btn.dark{background:var(--dark)}
+.btn.light{background:white;color:var(--dark)}
+section{padding:65px 7%}
+.center{text-align:center}
+.intro{max-width:760px;margin:0 auto 35px;color:#53636b}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;max-width:1150px;margin:30px auto}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.07)}
+.card-content{padding:24px}
+.card img{width:100%;height:185px;object-fit:cover}
+.icon{font-size:32px}
+.price{font-size:38px;font-weight:bold;color:var(--gold);margin:12px 0}
+.demo-wrap{max-width:1050px;margin:30px auto;background:white;border-radius:20px;overflow:hidden;box-shadow:0 12px 45px rgba(0,0,0,.12)}
+.hotel-hero{min-height:330px;background:linear-gradient(0deg,rgba(0,0,0,.68),transparent),url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=85') center/cover;display:flex;align-items:end;padding:35px;color:white}
+.hotel-hero h2{margin:5px 0}
+.hotel-nav{display:flex;gap:8px;overflow-x:auto;padding:15px;background:#f1eee8}
+.hotel-nav button{border:0;background:white;border-radius:30px;padding:12px 17px;white-space:nowrap;cursor:pointer;color:var(--dark);font-weight:bold}
+.hotel-nav button.active{background:var(--dark);color:white}
+.hotel-content{padding:28px;min-height:300px}
+.panel{display:none}
+.panel.active{display:block}
+.info{background:#f6f4ef;padding:18px;border-radius:12px;margin:14px 0}
+.info strong{color:#86683d}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.two img{width:100%;height:220px;object-fit:cover;border-radius:12px}
+.notice{font-size:13px;color:#68757b}
+.cta{background:var(--dark);color:white;text-align:center}
+footer{background:#0b1c25;color:#ddd;text-align:center;padding:28px;font-size:14px}
+footer a{color:#d6b77d}
+@media(max-width:600px){header{justify-content:center;text-align:center}nav a{margin:0 5px}.hero{min-height:420px;padding:50px 6%}section{padding:48px 5%}.hotel-content{padding:18px}}
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">GuestFlow Digital</div>
+<div class="logo">GuestFlow <span>Digital</span></div>
 <nav>
 <a href="#leistungen">Leistungen</a>
-<a href="#demo">Demo</a>
+<a href="#demo">Muster</a>
 <a href="#preise">Preise</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
 </header>
 
 <div class="hero">
-<h1>Der digitale Gästeservice, der begeistert.</h1>
-<p>Moderne digitale Gästemappen und intelligente Gästeinformationen für Hotels, Ferienwohnungen und Gastgeber.</p>
-<a class="btn" href="#demo">Beispiel entdecken</a>
-<a class="btn btn-outline" href="#kontakt">Jetzt anfragen</a>
+<div class="hero-content">
+<div class="eyebrow">Digitale Gastfreundschaft</div>
+<h1>Der perfekte Gästeservice beginnt digital.</h1>
+<p>Stilvolle, interaktive Gästemappen für Hotels, Pensionen und Ferienwohnungen. Alle wichtigen Informationen an einem Ort – jederzeit auf dem Smartphone Ihrer Gäste.</p>
+<a class="btn" href="#demo">Muster-Gästemappe ansehen</a>
+<a class="btn light" href="#kontakt">Jetzt anfragen</a>
+</div>
 </div>
 
 <section id="leistungen">
-<h2>Mehr Service. Weniger Aufwand.</h2>
-<p class="intro">Alle wichtigen Informationen für Ihre Gäste an einem Ort – jederzeit verfügbar, einfach per QR-Code.</p>
+<div class="center">
+<div class="eyebrow">Unsere Leistungen</div>
+<h2>Mehr Komfort für Ihre Gäste.<br>Weniger Aufwand für Ihr Team.</h2>
+<p class="intro">Wir verwandeln klassische Gästeinformationen in ein modernes digitales Erlebnis – individuell gestaltet für Ihren Betrieb.</p>
+</div>
 <div class="grid">
-<div class="card">
-<div class="symbol">📱</div>
-<h3>Digitale Gästemappe</h3>
-<p>WLAN, Check-in, Hausinformationen, Frühstückszeiten und wichtige Hinweise übersichtlich auf dem Smartphone.</p>
-</div>
-<div class="card">
-<div class="symbol">🌍</div>
-<h3>Mehrsprachiger Service</h3>
-<p>Professionelle Gästeinformationen auf Deutsch und Englisch. Weitere Sprachen auf Anfrage.</p>
-</div>
-<div class="card">
-<div class="symbol">📍</div>
-<h3>Regionale Empfehlungen</h3>
-<p>Ausflugsziele, Restaurants, Aktivitäten und persönliche Tipps für einen gelungenen Aufenthalt.</p>
-</div>
-<div class="card">
-<div class="symbol">💬</div>
-<h3>Gäste-Kommunikation</h3>
-<p>Freundliche Vorlagen für Anreise, Aufenthalt, Abreise und häufig gestellte Fragen.</p>
-</div>
+<div class="card"><div class="card-content"><div class="icon">📱</div><h3>Digitale Gästemappe</h3><p>Alle Hotelinformationen übersichtlich und mobil abrufbar – ohne App-Installation.</p></div></div>
+<div class="card"><div class="card-content"><div class="icon">🛎️</div><h3>Gästeservice</h3><p>Frühstückszeiten, WLAN, Check-in, Check-out und weitere Services auf einen Blick.</p></div></div>
+<div class="card"><div class="card-content"><div class="icon">🏔️</div><h3>Regionale Empfehlungen</h3><p>Ausflugsziele, Restaurants, Aktivitäten und persönliche Geheimtipps.</p></div></div>
+<div class="card"><div class="card-content"><div class="icon">✨</div><h3>Individuelles Design</h3><p>Eine Gästemappe passend zu Ihrer Marke, Ihren Farben und Ihrem Hotelstil.</p></div></div>
+<div class="card"><div class="card-content"><div class="icon">🌍</div><h3>Mehrsprachigkeit</h3><p>Auf Wunsch Informationen in mehreren Sprachen für internationale Gäste.</p></div></div>
+<div class="card"><div class="card-content"><div class="icon">🔗</div><h3>Einfacher QR-Zugang</h3><p>Ihre Gäste öffnen die digitale Gästemappe bequem über einen QR-Code oder Link.</p></div></div>
 </div>
 </section>
 
-<section class="alt" id="demo">
-<div class="inner">
-<h2>Entdecken Sie unsere digitale Gästemappe</h2>
-<p class="intro">So einfach und übersichtlich erhalten Ihre Gäste alle wichtigen Informationen.</p>
-<div class="demo">
-<h3>🏡 Herzlich willkommen!</h3>
-<p style="text-align:center">Wir wünschen Ihnen einen wunderschönen Aufenthalt.</p>
-<div class="demo-item">📶 <strong>WLAN</strong><div>Netzwerk und Passwort auf einen Blick</div></div>
-<div class="demo-item">🔑 <strong>Anreise & Check-in</strong><div>Alle wichtigen Informationen zur Unterkunft</div></div>
-<div class="demo-item">☕ <strong>Frühstück & Service</strong><div>Zeiten, Angebote und Ansprechpartner</div></div>
-<div class="demo-item">🏔️ <strong>Ausflüge & Erlebnisse</strong><div>Die schönsten Tipps für Ihre Umgebung</div></div>
-<div class="demo-item">💬 <strong>Fragen & Kontakt</strong><div>Schnelle Hilfe während des Aufenthalts</div></div>
+<section id="demo" style="background:#eeeae2">
+<div class="center">
+<div class="eyebrow">Live-Demonstration</div>
+<h2>Erleben Sie eine digitale Gästemappe</h2>
+<p class="intro">Entdecken Sie unsere interaktive Muster-Gästemappe für das fiktive Alpenblick Boutique Hotel. Tippen Sie auf die einzelnen Bereiche und erleben Sie die Gästeansicht.</p>
+</div>
+
+<div class="demo-wrap">
+<div class="hotel-hero">
+<div>
+<div style="letter-spacing:3px">✦ ✦ ✦ ✦</div>
+<h2>Alpenblick Boutique Hotel</h2>
+<p>Ihr Zuhause in den bayerischen Alpen</p>
 </div>
 </div>
+
+<div class="hotel-nav">
+<button class="active" onclick="showTab('welcome',this)">🏡 Willkommen</button>
+<button onclick="showTab('wifi',this)">📶 WLAN</button>
+<button onclick="showTab('breakfast',this)">🥐 Frühstück</button>
+<button onclick="showTab('service',this)">🛎️ Hotelservice</button>
+<button onclick="showTab('explore',this)">🏔️ Entdecken</button>
+<button onclick="showTab('contact',this)">☎️ Kontakt</button>
+</div>
+
+<div class="hotel-content">
+
+<div id="welcome" class="panel active">
+<h2>Herzlich willkommen!</h2>
+<p>Liebe Gäste,</p>
+<p>wir freuen uns, Sie im Alpenblick Boutique Hotel begrüßen zu dürfen. Genießen Sie entspannte Tage, herzliche Gastfreundschaft und die einzigartige Bergwelt rund um Garmisch-Partenkirchen.</p>
+<div class="two">
+<div class="info"><strong>Check-in</strong><p>Ab 15:00 Uhr</p></div>
+<div class="info"><strong>Check-out</strong><p>Bis 11:00 Uhr</p></div>
+</div>
+<p>Über die Menüleiste finden Sie alle wichtigen Informationen für einen rundum gelungenen Aufenthalt.</p>
+</div>
+
+<div id="wifi" class="panel">
+<h2>📶 Kostenloses WLAN</h2>
+<p>Bleiben Sie auch während Ihres Urlaubs verbunden.</p>
+<div class="info">
+<strong>WLAN-Netzwerk</strong>
+<h3>Alpenblick-Guest</h3>
+<strong>Passwort</strong>
+<h3 id="wifiPass">Alpenblick2026</h3>
+<button class="btn dark" onclick="copyWifi()">Passwort kopieren</button>
+<p id="copyStatus" class="notice"></p>
+</div>
+<p class="notice">Beispieldaten für die Muster-Gästemappe.</p>
+</div>
+
+<div id="breakfast" class="panel">
+<h2>🥐 Frühstück mit Bergblick</h2>
+<div class="two">
+<div>
+<p>Starten Sie genussvoll in den Tag mit einem liebevoll angerichteten Frühstück.</p>
+<div class="info">
+<strong>Frühstückszeiten</strong>
+<h3>Täglich 7:30 – 10:30 Uhr</h3>
+<p>Ort: Frühstücksrestaurant im Erdgeschoss</p>
+</div>
+<p>Freuen Sie sich auf frische Backwaren, regionale Spezialitäten, Obst, Kaffeespezialitäten und eine Auswahl an herzhaften und süßen Köstlichkeiten.</p>
+<p>Bitte sprechen Sie unser Team bei Allergien oder besonderen Ernährungswünschen an.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=900&q=85" alt="Frühstück mit Croissants und Kaffee">
+</div>
+</div>
+
+<div id="service" class="panel">
+<h2>🛎️ Unser Hotelservice</h2>
+<div class="grid" style="margin:15px auto">
+<div class="info"><h3>🕒 Rezeption</h3><p>Täglich von 7:00 bis 21:00 Uhr</p></div>
+<div class="info"><h3>🧳 Gepäck</h3><p>Gerne unterstützen wir Sie bei der Gepäckaufbewahrung.</p></div>
+<div class="info"><h3>🚗 Parken</h3><p>Informationen zu Parkmöglichkeiten erhalten Sie an der Rezeption.</p></div>
+<div class="info"><h3>🐾 Haustiere</h3><p>Bitte erkundigen Sie sich vorab nach den Möglichkeiten.</p></div>
+</div>
+<p>Unser Team hilft Ihnen gerne bei Fragen, Wünschen und Empfehlungen.</p>
+</div>
+
+<div id="explore" class="panel">
+<h2>🏔️ Die Region entdecken</h2>
+<p>Erleben Sie die schönsten Seiten von Garmisch-Partenkirchen.</p>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=85" alt="Alpenpanorama">
+<div class="card-content"><h3>Zugspitze</h3><p>Deutschlands höchster Berg bietet spektakuläre Panoramablicke.</p><a href="https://zugspitze.de" target="_blank" rel="noopener">Mehr erfahren →</a></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=700&q=85" alt="Natur und Berglandschaft">
+<div class="card-content"><h3>Eibsee</h3><p>Ein traumhafter Bergsee am Fuße der Zugspitze.</p><a href="https://www.eibsee.de" target="_blank" rel="noopener">Mehr erfahren →</a></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=700&q=85" alt="Berge und Natur">
+<div class="card-content"><h3>Partnachklamm</h3><p>Entdecken Sie eine eindrucksvolle Schlucht mit tosenden Wasserfällen.</p><a href="https://www.gapa-tourismus.de" target="_blank" rel="noopener">Tourismusinformationen →</a></div>
+</div>
+</div>
+</div>
+
+<div id="contact" class="panel">
+<h2>☎️ Wir sind für Sie da</h2>
+<p>Sie haben Fragen zu Ihrem Aufenthalt oder benötigen Unterstützung? Unser Rezeptionsteam hilft Ihnen gerne weiter.</p>
+<div class="info">
+<h3>Alpenblick Boutique Hotel</h3>
+<p>Dies ist ein fiktives Beispielhotel zur Demonstration einer digitalen Gästemappe.</p>
+<p>Im fertigen Kundenprojekt werden hier die echten Kontaktdaten, Telefonnummern, E-Mail-Adressen und Serviceangebote des Hotels hinterlegt.</p>
+</div>
+<div class="info">
+<h3>🚨 Im Notfall</h3>
+<p>Polizei: <a href="tel:110">110</a></p>
+<p>Feuerwehr und Rettungsdienst: <a href="tel:112">112</a></p>
+</div>
+</div>
+
+</div>
+</div>
+<p class="center notice">Alle Hotelnamen, Öffnungszeiten, WLAN-Zugangsdaten und Serviceangaben dieser Demonstration sind fiktive Beispieldaten.</p>
 </section>
 
 <section id="ablauf">
-<h2>In drei Schritten zu Ihrem digitalen Gästeservice</h2>
+<div class="center">
+<div class="eyebrow">So funktioniert es</div>
+<h2>In drei Schritten zu Ihrer Gästemappe</h2>
+</div>
 <div class="grid">
-<div class="card"><h3>1. Unverbindlich anfragen</h3><p>Sie erzählen uns von Ihrer Unterkunft und Ihren Anforderungen.</p></div>
-<div class="card"><h3>2. Individuell gestalten</h3><p>Wir erstellen Ihre digitale Gästemappe mit Ihren Informationen und Ihrem Stil.</p></div>
-<div class="card"><h3>3. Gäste begeistern</h3><p>Sie erhalten einen Link und QR-Code, über den Ihre Gäste die Informationen aufrufen können.</p></div>
+<div class="card"><div class="card-content"><div class="icon">01</div><h3>Persönliches Gespräch</h3><p>Wir besprechen Ihren Betrieb, Ihre Wünsche und die benötigten Inhalte.</p></div></div>
+<div class="card"><div class="card-content"><div class="icon">02</div><h3>Individuelle Gestaltung</h3><p>Wir erstellen Ihre digitale Gästemappe mit passenden Bildern, Texten und Informationen.</p></div></div>
+<div class="card"><div class="card-content"><div class="icon">03</div><h3>Bereit für Ihre Gäste</h3><p>Nach Ihrer Freigabe erhalten Sie einen Link und einen QR-Code zur Nutzung.</p></div></div>
 </div>
 </section>
 
-<section class="alt" id="preise">
-<div class="inner">
-<h2>Transparent und unkompliziert</h2>
-<p class="intro">Professionelle digitale Lösungen ohne komplizierte Technik.</p>
-<div class="grid">
+<section id="preise" style="background:#eeeae2">
+<div class="center">
+<div class="eyebrow">Investition</div>
+<h2>Professionell. Individuell. Bezahlbar.</h2>
+</div>
+<div class="grid" style="max-width:800px">
 <div class="card">
+<div class="card-content">
 <h3>Digitale Gästemappe</h3>
+<p>Ihr professioneller Einstieg in den digitalen Gästeservice.</p>
 <div class="price">ab 299 €</div>
-<p>Einmalige Einrichtung</p>
-<p>✓ Individuelle Gästemappe</p>
-<p>✓ Mobilfreundliches Design</p>
-<p>✓ QR-Code für Ihre Gäste</p>
-<p>✓ Deutsch und Englisch</p>
-<a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20Digitale%20Gaestemappe">Angebot anfragen</a>
+<p>✓ Individuelle Gestaltung</p>
+<p>✓ Mobiloptimierte Gästemappe</p>
+<p>✓ Hotelinformationen und Services</p>
+<p>✓ WLAN- und Frühstücksinformationen</p>
+<p>✓ Ausflugstipps</p>
+<p>✓ QR-Code-Zugang</p>
+<a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20Digitale%20G%C3%A4stemappe">Angebot anfragen</a>
+</div>
 </div>
 <div class="card">
-<h3>Pflege & Aktualisierung</h3>
-<div class="price">Auf Anfrage</div>
-<p>Optionaler laufender Service</p>
-<p>✓ Aktualisierung von Gästeinformationen</p>
-<p>✓ Anpassung von Empfehlungen</p>
-<p>✓ Saisonale Änderungen</p>
-<p>✓ Individuelle Betreuung</p>
-<a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20Aktualisierungsservice">Details anfragen</a>
+<div class="card-content">
+<h3>Individuelle Erweiterungen</h3>
+<p>Für Hotels mit besonderen Anforderungen.</p>
+<div class="price" style="font-size:29px">Auf Anfrage</div>
+<p>✓ Zusätzliche Inhaltsbereiche</p>
+<p>✓ Mehrsprachige Gestaltung</p>
+<p>✓ Umfangreiche regionale Empfehlungen</p>
+<p>✓ Individuelle Designwünsche</p>
+<p>✓ Anpassungen und Aktualisierungen</p>
+<a class="btn dark" href="mailto:info@guestflow-digital.com?subject=Individuelles%20Angebot">Beratung anfragen</a>
 </div>
 </div>
-<p class="small" style="text-align:center">Der endgültige Preis richtet sich nach dem individuellen Umfang.</p>
 </div>
+<p class="center notice">Der konkrete Leistungsumfang und gegebenenfalls laufende Kosten werden im individuellen Angebot vereinbart.</p>
 </section>
 
-<section class="contact" id="kontakt">
-<h2>Bereit für einen modernen Gästeservice?</h2>
-<p>Ob Apartment, Ferienwohnung oder Hotel – wir unterstützen Sie dabei, Ihren Gästen Informationen einfach und professionell bereitzustellen.</p>
-<a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20GuestFlow%20Digital">Jetzt unverbindlich anfragen</a>
+<section id="kontakt" class="cta">
+<div class="eyebrow">Kontakt</div>
+<h2>Bereit für den nächsten Schritt?</h2>
+<p>Verleihen Sie Ihrem Gästeservice eine moderne, digitale Note.</p>
+<p>Wir freuen uns darauf, Ihren Betrieb kennenzulernen.</p>
+<a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20an%20GuestFlow%20Digital">Jetzt unverbindlich anfragen</a>
 <p>info@guestflow-digital.com</p>
 </section>
 
 <footer>
-<p>© 2026 GuestFlow Digital · Digitale Gästeservices</p>
-<p>Kontakt: <a href="mailto:info@guestflow-digital.com">info@guestflow-digital.com</a></p>
-<p>Impressum und Datenschutzerklärung werden ergänzt.</p>
+<p><strong>GuestFlow Digital</strong></p>
+<p>Digitale Gästemappen für moderne Gastgeber</p>
+<p><a href="mailto:info@guestflow-digital.com">info@guestflow-digital.com</a></p>
+<p>© 2026 GuestFlow Digital. Alle Rechte vorbehalten.</p>
+<p class="notice">Vor dem geschäftlichen Einsatz sind vollständige Anbieterkennzeichnung und Datenschutzhinweise zu ergänzen.</p>
 </footer>
 
+<script>
+function showTab(id,button){
+document.querySelectorAll('.panel').forEach(function(p){
+p.classList.remove('active');
+});
+document.querySelectorAll('.hotel-nav button').forEach(function(b){
+b.classList.remove('active');
+});
+document.getElementById(id).classList.add('active');
+button.classList.add('active');
+}
+function copyWifi(){
+var password=document.getElementById('wifiPass').textContent;
+var status=document.getElementById('copyStatus');
+if(navigator.clipboard && window.isSecureContext){
+navigator.clipboard.writeText(password).then(function(){
+status.textContent='Passwort kopiert!';
+}).catch(function(){
+status.textContent='Bitte Passwort manuell markieren und kopieren.';
+});
+}else{
+status.textContent='Bitte Passwort manuell markieren und kopieren.';
+}
+}
+</script>
 </body>
 </html>
