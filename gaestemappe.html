@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digitale Gästemappe | GuestFlow Digital</title>
+<style>
+:root{--dark:#18342e;--green:#376e59;--cream:#f7f5ef;--gold:#c7a46b}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--cream);color:#25352f;line-height:1.6}
+header{background:var(--dark);color:white;padding:22px;text-align:center}
+header small{letter-spacing:3px;color:#e5d1a9}
+.hero{padding:65px 20px;text-align:center;color:white;background:linear-gradient(135deg,#18342eee,#376e59dd),url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1400') center/cover}
+h1{font-size:clamp(30px,6vw,52px);margin:10px 0}
+.hero p{font-size:18px}
+.btn{display:inline-block;background:var(--gold);color:#182a23;padding:13px 22px;border-radius:30px;text-decoration:none;font-weight:bold;margin:8px}
+nav{display:flex;gap:10px;overflow-x:auto;padding:14px;background:white;position:sticky;top:0;z-index:2}
+nav a{white-space:nowrap;color:var(--dark);text-decoration:none;background:#edf2ee;padding:9px 14px;border-radius:20px}
+main{max-width:1050px;margin:auto;padding:25px 16px}
+section{scroll-margin-top:90px;margin:35px 0}
+h2{font-size:28px;color:var(--dark)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px}
+.card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 5px 20px #0000000c}
+.card img{width:100%;height:190px;object-fit:cover}
+.content{padding:22px}
+.tag{font-size:12px;color:var(--green);font-weight:bold;text-transform:uppercase;letter-spacing:2px}
+.info{background:#e9efe9;padding:22px;border-radius:15px}
+button{border:0;cursor:pointer;background:var(--green);color:white;padding:12px 18px;border-radius:9px;font-size:15px}
+details{background:white;margin:10px 0;padding:17px;border-radius:12px}
+summary{cursor:pointer;font-weight:bold}
+footer{background:var(--dark);color:white;text-align:center;padding:35px 18px}
+footer a{color:#e5d1a9}
+</style>
+</head>
+<body>
+<header><strong>ALPENBLICK BOUTIQUE HOTEL</strong><br><small>IHRE DIGITALE GÄSTEMAPPE</small></header>
+<div class="hero">
+<p>Herzlich willkommen</p>
+<h1>Schön, dass Sie da sind.</h1>
+<p>Entdecken Sie alles für einen unvergesslichen Aufenthalt in den Bergen.</p>
+<a class="btn" href="#informationen">Aufenthalt entdecken</a>
+</div>
+<nav>
+<a href="#informationen">Informationen</a>
+<a href="#wlan">WLAN</a>
+<a href="#genuss">Genuss</a>
+<a href="#erlebnisse">Erlebnisse</a>
+<a href="#service">Service</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+<main>
+<section id="informationen">
+<p class="tag">Gut zu wissen</p>
+<h2>Ihr Aufenthalt auf einen Blick</h2>
+<div class="grid">
+<div class="card"><div class="content"><h3>Check-in</h3><p>Ab 15:00 Uhr</p><p>Wir freuen uns auf Ihre Anreise.</p></div></div>
+<div class="card"><div class="content"><h3>Check-out</h3><p>Bis 11:00 Uhr</p><p>Fragen Sie an der Rezeption nach einer Verlängerung.</p></div></div>
+<div class="card"><div class="content"><h3>Rezeption</h3><p>Täglich von 07:00 bis 21:00 Uhr</p><p>Wir helfen Ihnen gerne weiter.</p></div></div>
+</div>
+</section>
+<section id="wlan">
+<p class="tag">Einfach verbunden</p>
+<h2>Ihr WLAN-Zugang</h2>
+<div class="info">
+<p><strong>Netzwerk:</strong> Alpenblick-Gast</p>
+<p><strong>Passwort:</strong> Willkommen2026</p>
+<button onclick="navigator.clipboard.writeText('Willkommen2026').then(()=>alert('Passwort kopiert!')).catch(()=>alert('Bitte Passwort manuell kopieren.'))">WLAN-Passwort kopieren</button>
+</div>
+</section>
+<section id="genuss">
+<p class="tag">Kulinarik</p>
+<h2>Genuss im Alpenblick</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=800" alt="Frühstück">
+<div class="content"><h3>Frühstück</h3><p>Täglich 07:30 bis 10:30 Uhr. Starten Sie mit regionalen Spezialitäten in den Tag.</p></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Restaurant">
+<div class="content"><h3>Restaurant</h3><p>Genießen Sie ausgewählte Speisen in gemütlicher Atmosphäre.</p></div>
+</div>
+</div>
+</section>
+<section id="erlebnisse">
+<p class="tag">Die Region entdecken</p>
+<h2>Unsere Ausflugstipps</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Berge">
+<div class="content"><h3>Die Bergwelt</h3><p>Entdecken Sie beeindruckende Gipfel und traumhafte Wanderwege.</p><a href="https://www.zugspitze.de" target="_blank" rel="noopener">Zugspitze entdecken</a></div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" alt="See">
+<div class="content"><h3>Seen und Natur</h3><p>Erleben Sie entspannte Stunden am Wasser und die Schönheit der Alpen.</p></div>
+</div>
+</div>
+</section>
+<section id="service">
+<p class="tag">Wir sind für Sie da</p>
+<h2>Häufige Fragen</h2>
+<details><summary>Gibt es Parkmöglichkeiten?</summary><p>Bitte erkundigen Sie sich an der Rezeption nach verfügbaren Parkplätzen.</p></details>
+<details><summary>Sind Haustiere erlaubt?</summary><p>Bitte sprechen Sie unser Team vor der Anreise an.</p></details>
+<details><summary>Kann ich zusätzliche Handtücher bekommen?</summary><p>Unser Team hilft Ihnen gerne weiter.</p></details>
+<details><summary>Kann ich später auschecken?</summary><p>Ein später Check-out ist nach Verfügbarkeit möglich.</p></details>
+</section>
+<section id="kontakt">
+<p class="tag">Persönlicher Service</p>
+<h2>Haben Sie einen Wunsch?</h2>
+<div class="info">
+<p>Unser Team freut sich darauf, Ihnen einen angenehmen Aufenthalt zu ermöglichen.</p>
+<a class="btn" href="mailto:info@guestflow-digital.com?subject=Anfrage%20zur%20Muster-G%C3%A4stemappe">Kontakt aufnehmen</a>
+</div>
+</section>
+</main>
+<footer>
+<p><strong>ALPENBLICK BOUTIQUE HOTEL</strong></p>
+<p>Dies ist eine fiktive Demo-Gästemappe mit Beispielinformationen.</p>
+<p>Erstellt von <a href="https://guestflow-digital.com">GuestFlow Digital</a></p>
+<p>Digitale Gästemappen für moderne Gastgeber</p>
+</footer>
+</body>
+</html>
